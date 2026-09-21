@@ -6,15 +6,17 @@ midi = pretty_midi.PrettyMIDI()
 
 piano = pretty_midi.Instrument(program=0)
 
+genero = "trance"
+
 acordes = {
-2
-"trance": [57, 60, 64], # Am
-3
-"techno": [54, 57, 61], # F#m
-4
-"melodic": [52, 55, 59] # Em
-5
-} 
+    "trance": [57, 60, 64],   # Am
+    "techno": [54, 57, 61],   # F#m
+    "melodic": [52, 55, 59]   # Em
+}
+
+acorde = acordes[genero]
+
+print(f"Generando MIDI para: {genero}")
 
 for nota in acorde:
     piano.notes.append(
